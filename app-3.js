@@ -63,7 +63,7 @@ app.get('/api/products', function (req, res){
 app.get('/api/products/:id', function (req, res){
   ProductModel.findById(req.params.id, function (err, product) {
     console.log(product);
-    if (product === null){
+    if (product == null){
       res.send('Error: not found');
     } else if (!err) {
       res.send(product.title +' '+product.description);

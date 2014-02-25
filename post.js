@@ -25,22 +25,12 @@ var Product = new Schema({
     title: { type: String, required: true },
     description: { type: String, required: true },
     style: { type: String, unique: true },
+    images: [Images],
+    categories: [Categories],
+    catalogs: [Catalogs],
+    variants: [Variants],
     modified: { type: Date, default: Date.now }
 });
-
-
-//var Product = require('./models/schema.js')(mongoose, Schema);
-
-// var Product = new Schema({
-//     title: { type: String, required: true },
-//     description: { type: String, required: true },
-//     style: { type: String, unique: true },
-//     images: [Images],
-//     categories: [Categories],
-//     catalogs: [Catalogs],
-//     variants: [Variants],
-//     modified: { type: Date, default: Date.now }
-// });
 
 var ProductModel = mongoose.model('Product', Product);
 
@@ -63,7 +53,7 @@ app.get('/api/products', function (req, res){
 app.get('/api/products/:id', function (req, res){
   ProductModel.findById(req.params.id, function (err, product) {
     console.log(product);
-    if (product === null){
+    if (product == null){
       res.send('Error: not found');
     } else if (!err) {
       res.send(product.title +' '+product.description);
