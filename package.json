@@ -1,0 +1,24 @@
+{
+  "name": "mongoose-restful-API",
+  "version": "0.0.0",
+  "description": "mongoose-restful-API ====================",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cvince/mongoose-restful-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvince/mongoose-restful-API/issues"
+  },
+  "homepage": "https://github.com/cvince/mongoose-restful-API",
+  "devDependencies": {
+    "path": "~0.4.9",
+    "express": "~3.4.8",
+    "mongoose": "~3.8.8"
+  }
+}
